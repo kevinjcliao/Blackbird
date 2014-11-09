@@ -1,0 +1,14 @@
+.nav a {
+	color: #5a5a5a; 
+	font-size: 20px; 
+	font-weight: bold; 
+	padding: 14px 10px; 
+}
+
+.nav li {
+	display: inline; 
+}
+
+.cover {
+	background-image: 'images/autumn.jpg'
+}
