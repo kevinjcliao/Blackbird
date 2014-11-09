@@ -1,14 +1,64 @@
+html {
+}
+body{
+	background: url(../images/cover_background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover; 
+}
+
+
+
+.nav {
+	padding-top: 10px;
+	background-color: rgba(0,0,0,.5);  
+	width: 100%;
+	margin: 0 auto; 
+}
+
+.nav ul {
+	margin: 14px 10px; 
+}
+
+.nav .container {
+	width: 75%;
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+.nav h2 {
+	padding-top: 0px;
+	color: white; 
+	margin-top: 0px; 	
+}
 .nav a {
 	color: #5a5a5a; 
 	font-size: 20px; 
 	font-weight: bold; 
-	padding: 14px 10px; 
+	color: white; 
 }
-
 .nav li {
-	display: inline; 
+	display: inline;
+ 	margin-left: 20px;	
 }
 
-.cover {
-	background-image: 'images/autumn.jpg'
+.nav li.current-element{
+	border-bottom: 2px solid transparent;
+	color: white;
+}
+
+.cover .container{
+	width: 50%;
+	height: 20%;
+	background-color: black; 
+	color: white;
+	text-align: center; 
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);	
+	background-color: rgba(0,0,0,0.3); 
+	padding: 10px;
+	position: fixed;
+	top:40%;
+	left: 25%;
+	margin: auto;
 }
