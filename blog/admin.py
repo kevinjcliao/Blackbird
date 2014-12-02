@@ -11,4 +11,12 @@ class TitleAdmin(admin.ModelAdmin):
     inlines = [Post_Content_In_Line]
     
 """
-admin.site.register(Blog_Post)
+
+class Blog_Post_Admin(admin.ModelAdmin): 
+    fieldsets = [
+            (None,              {'fields': ['title_text']}), 
+            ('Publishing Date', {'fields': ['pub_date'], 'classes': ['collapse']}),
+            ('Post Content',    {'fields': ['post_content_text']}), 
+        ]
+
+admin.site.register(Blog_Post, Blog_Post_Admin)

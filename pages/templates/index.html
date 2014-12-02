@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +9,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
 
 <!-- styles.css-->
-<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="{% static 'styles/main.css' %}">
 
 <!-- cover.css -->
-<link rel="stylesheet" href="styles/cover.css">
+<link rel="stylesheet" href="{% static 'styles/cover.css' %}">
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -34,7 +35,7 @@
 				<li><a href="#">Code</a></li>
 				<li><a href="#">Photography</a></li>
 				<li><a href="#">Ramblings</a></li>
-				<li class="current-element"><a href="About.html">About Me</a></li>	
+				<li class="current-element"><a href="about">About Me</a></li>	
 			</ul>
 		</div>
 	</div> <!--End of nav--> 

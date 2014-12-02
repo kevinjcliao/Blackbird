@@ -1,3 +1,4 @@
+{% load staticfiles%}
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
 
 <!-- styles.css-->
-<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="{% static 'styles/main.css' %}">
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -21,7 +22,7 @@
 			<h2>Kevin Liao</h2>
 		</ul>	
 		<ul class="pull-right">
-			<li><a href="index.html">Home</a></li>
+			<li><a href="">Home</a></li>
 			<li><a href="#">Code</a></li>
 			<li><a href="#">Photography</a></li>
 			<li><a href="#">Ramblings</a></li>
@@ -30,7 +31,7 @@
 	</div>
 </div> <!--End of nav--> 
 	<div class="text_page_container">
-		<img src="images/about_picture.jpg">
+		<img src='{% static "images/about_picture.jpg" %}'>
 		<div class="text_page_body">
 		<h1>Lorem ipsum dolor sit amet</h2><p>consectetur adipiscing elit. Etiam eu consequat ex, eget dignissim odio. Vivamus sagittis lacinia nunc, in dignissim odio imperdiet congue. Duis commodo diam eu augue semper hendrerit. Donec malesuada cursus arcu, quis ullamcorper mi feugiat at. Ut fermentum nunc a orci elementum, in pulvinar purus posuere. Nunc et laoreet tortor. Nam pharetra eget dolor sit amet molestie. Phasellus dolor dolor, auctor ac nisl eget, laoreet porttitor velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat interdum auctor. Quisque turpis orci, ultricies sed suscipit at, aliquet nec nisl. </p>
 
