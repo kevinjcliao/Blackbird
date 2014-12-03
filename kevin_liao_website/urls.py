@@ -1,13 +1,13 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-
+from pages import views
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'kevin_liao_website.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^blog/', include('blog.urls')), 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^about/', include('pages.urls')),
-    url(r'^$', include('pages.urls')),  
+    url(r'^about/', views.about, name='about'), 
+    url(r'^$', views.index, name='index'), 
 
 )
