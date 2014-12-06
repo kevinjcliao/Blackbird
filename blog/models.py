@@ -7,5 +7,6 @@ class Blog_Post(models.Model):
         return self.title_text
     title_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
+    post_photo = models.ImageField(upload_to="blog/photos")
     post_content_text = models.TextField()
 

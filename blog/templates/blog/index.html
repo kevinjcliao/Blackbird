@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="text_page_container">
-	<div class="text_page_body">
-		<p>Hello World!</p>
-	</div><!-- end text_page_body-->
-</div><!-- end text_page_container-->
+{% if latest_post_list %}
+	<ul>
+		{% for Blog_Post in latest_post_list %}
+		<li><a href="/blog/{{ title_text.id }}/">{{title_text.Blog_Post }}</a></li>
+	 	{% endfor %}
+	</ul>
+{% else %}
+	<p>No posts are available.</p>
+{% endif %}
 {% endblock %}
