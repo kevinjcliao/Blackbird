@@ -1,36 +1,7 @@
-{% load staticfiles%}
-<!DOCTYPE html>
-<html>
-<head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
-
-<!-- styles.css-->
-<link rel="stylesheet" href="{% static 'styles/main.css' %}">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-</head>
-
-<body>
-<div class="nav">
-	<div class="container">
-		<ul class="pull-left">
-			<h2>Kevin Liao</h2>
-		</ul>	
-		<ul class="pull-right">
-			<li><a href="/">Home</a></li>
-			<li><a href="#">Code</a></li>
-			<li><a href="#">Photography</a></li>
-			<li><a href="#">Ramblings</a></li>
-			<li class="current-element"><a href="#">About Me</a></li>	
-		</ul>
-	</div>
-</div> <!--End of nav--> 
-	<div class="text_page_container">
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<div class="text_page_container">
 		<img src='{% static "images/about_picture.jpg" %}'>
 		<div class="text_page_body">
 		<h1>Lorem ipsum dolor sit amet</h2><p>consectetur adipiscing elit. Etiam eu consequat ex, eget dignissim odio. Vivamus sagittis lacinia nunc, in dignissim odio imperdiet congue. Duis commodo diam eu augue semper hendrerit. Donec malesuada cursus arcu, quis ullamcorper mi feugiat at. Ut fermentum nunc a orci elementum, in pulvinar purus posuere. Nunc et laoreet tortor. Nam pharetra eget dolor sit amet molestie. Phasellus dolor dolor, auctor ac nisl eget, laoreet porttitor velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat interdum auctor. Quisque turpis orci, ultricies sed suscipit at, aliquet nec nisl. </p>
@@ -43,7 +14,6 @@
 
 		<p>Curabitur arcu ligula, accumsan eget sagittis eu, egestas at ex. Quisque elit quam, luctus a iaculis vitae, hendrerit quis libero. Nulla auctor rhoncus metus, sit amet vestibulum elit iaculis non. Fusce dignissim dictum convallis. Donec ut commodo nibh. Suspendisse at ultricies diam. Pellentesque mollis, mi sit amet faucibus sollicitudin, lectus magna euismod ante, in rutrum sapien nisl aliquet enim. Mauris pharetra sodales augue quis viverra. Sed augue quam, dapibus vitae lorem sit amet, tempus pretium lectus. Nullam eget lobortis odio. In congue nunc sapien, ut vulputate urna viverra fermentum. Curabitur aliquam erat non elit auctor imperdiet. Nulla ac aliquam leo. Duis quam velit, venenatis eget porttitor sit amet, volutpat non ipsum. Vivamus tempor faucibus quam, vitae ultrices nulla pulvinar et.</p> 
 	</div> <!--End text_page_body-->
-
-	</div><!--End text_page_container-->
-</body>
-</html>
+</div><!--end text_page_container -->
+	{% endblock %} <!-- end contentblock -->
+	
