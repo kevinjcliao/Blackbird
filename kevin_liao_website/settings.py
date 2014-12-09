@@ -89,3 +89,6 @@ STATICFILES_DIRS=(
         STATIC_PATH,
 )
 
+    
+MEDIA_URL = 'http://localhost/media/'
+MEDIA_ROOT= 'http://localhost/media/'

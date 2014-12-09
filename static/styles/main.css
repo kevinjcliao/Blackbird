@@ -7,7 +7,7 @@ html {
 	padding-top: 10px;
 	background-color: rgb(0,0,0);  
 	width: 100%;
-	margin: 0 auto; 
+	margin: 0 auto;	
 }
 
 .nav .active {
@@ -62,13 +62,15 @@ html {
 
 .text_page_container {
 	background-color: rgba(234,236,234,1);
-	height: 100%;
+	/*height: 100%;*/
 	width: 70%; 
+	margin-top: 2%;
 	margin-left: 16%; 
 	margin-right: 14%; 
-	/*-moz-box-shadow: 1px 1px 1px #575757;
-	-webkit-box-shadow: 1px 1px 1px #575757;
-	box-shadow: 1px 1px 1px #575757;*/
+	margin-bottom: 2%;
+	moz-box-shadow: 1px 1px 1px rgb(204,204,204);
+	-webkit-box-shadow: 1px 1px 1px rgb(204,204,204);
+	box-shadow: 1px 1px 1px rgb(204,204,204);
 }
 
 .text_page_container img {
@@ -79,7 +81,7 @@ html {
 	font-size: 18px; 
 	padding-right: 15%;
  	padding-left: 15%; 
-	padding-bottom: 15%; 	
+	padding-bottom: 5%; 	
 	margin-left: auto; 
 	margin-right: auto; 
 }

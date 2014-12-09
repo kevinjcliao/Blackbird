@@ -1,11 +1,20 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+{% block additional_header %}
+<!-- blog.css -->
+<link rel="stylesheet" href="{% static 'styles/blog.css' %}">
+{% endblock %}
 {% block content %}
 {% if latest_post_list %}
-	<ul>
 		{% for Blog_Post in latest_post_list %}
-		<li><a href="/blog/{{ Blog_Post.id }}/">{{Blog_Post.title_text}}</a></li>
+			<div class="text_page_container">
+				<div class="text_page_body">
+					<img src="{{MEDIA_ROOT}}{{Blog_Post.post_photo}}"/>
+					<a class="blog_title" href="/blog/{{ Blog_Post.id }}/">{{Blog_Post.title_text}}</a>
+					<div class="blog_content">{{Blog_Post.post_content_text|truncatewords:50}}</div>
+				</div><!--End text_page_body-->
+			</div> <!--End text_page_container-->
 	 	{% endfor %}
-	</ul>
 {% else %}
 	<p>No posts are available.</p>
 {% endif %}

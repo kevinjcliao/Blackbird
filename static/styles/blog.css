@@ -1,0 +1,9 @@
+.blog_content{
+	font-family: Georgia,Times,Times New Roman,serif; 
+	font-size: 20px}
+
+a.blog_title{
+	font-size: 50px;
+	color: black; 
+	text-align: center; 
+}
