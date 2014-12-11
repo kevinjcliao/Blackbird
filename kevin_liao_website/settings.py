@@ -90,5 +90,5 @@ STATICFILES_DIRS=(
 )
 
     
-MEDIA_URL = 'http://localhost/media/'
-MEDIA_ROOT= 'http://localhost/media/'
+MEDIA_URL = 'http://localhost:8000/media/'
+MEDIA_ROOT= 'media'
