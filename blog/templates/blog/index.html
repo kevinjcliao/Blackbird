@@ -8,11 +8,11 @@
 {% if latest_post_list %}
 		{% for Blog_Post in latest_post_list %}
 			<div class="text_page_container">
-				<div class="text_page_body">
-					<img src="{{MEDIA_URL}}{{Blog_Post.post_photo}}"/>
-					<p>{{Blog_Post.post_photo}}</p>
+				<img src="{{MEDIA_URL}}{{Blog_Post.post_photo}}"/>
+				<div class="text_page_body">				
 					<a class="blog_title" href="/blog/{{ Blog_Post.id }}/">{{Blog_Post.title_text}}</a>
-					<div class="blog_content">{{Blog_Post.post_content_text|truncatewords:50}}</div>
+					<div class="blog_content">{{Blog_Post.post_content_text|truncatewords:200}}</div>
+					<a href="/blog/{{ Blog_Post.id }}/">Read more</a>
 				</div><!--End text_page_body-->
 			</div> <!--End text_page_container-->
 	 	{% endfor %}
