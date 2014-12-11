@@ -7,11 +7,14 @@
 
 {% block content %}
 <div class="text_page_container">
+	<img src="{{MEDIA_URL}}{{Blog_Post.post_photo}}"/>
+
 	<div class = "text_page_body">
-		<img src="{{MEDIA_ROOT}}{{Blog_Post.post_photo}}"/>
 		<h2 class="blog_title">{{Blog_Post.title_text}}</h2>
 		<div class="blog_content">{{Blog_Post.post_content_text}}</div>
 	</div> <!-- end text_page_body-->
 </div> <!-- end text_page_container-->
 
 {% endblock %}
+
+

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block additional_header %}
+<!-- blog.css -->
+<link rel="stylesheet" href="{% static 'styles/blog.css' %}">
+{% endblock %}
+{% block content %}
+{% if all_post_list %}
+		{% for Blog_Post in all_post_list %}
+			<div class="text_page_container">
+				<div class="text_page_body">				
+					<a class="blog_title" href="/blog/{{ Blog_Post.id }}/">{{Blog_Post.title_text}}</a>
+					<br>
+					<b>Published on {{Blog_Post.pub_date}}</b>	
+					<div class="blog_content">{{Blog_Post.post_content_text|truncatewords:50}}</div>
+					<a href="/blog/{{ Blog_Post.id }}/">Read more</a>
+				</div><!--End text_page_body-->
+			</div> <!--End text_page_container-->
+	 	{% endfor %}
+{% else %}
+	<p>No posts are available.</p>
+{% endif %}
+{% endblock %}

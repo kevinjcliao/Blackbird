@@ -11,3 +11,9 @@ def index(request):
     #post_photo = Blog_Post.post_photo
     context = {'latest_post_list': latest_post_list}
     return render(request, 'blog/index.html', context)
+
+def archive(request): 
+    all_post_list    = Blog_Post.objects.order_by('-pub_date')
+    context={'all_post_list': all_post_list}
+    return render(request, 'blog/archive.html', context)
+
