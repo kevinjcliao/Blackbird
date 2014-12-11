@@ -1,4 +1,4 @@
-# Fish
+# Blackbird
 ***Note, Blackbird is not ready for production use!***
 Blackbird can be run on a Django test server locally, and is fully functional in that regard, but please do not use it in production! 
 
