@@ -17,19 +17,23 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__name__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3lnujsh1sowgzai(!_wj_g6u2nh9k38-6tt-b(!s^u0(v9ima2'
+SECRET_KEY = '4c4#@7eonivm(j45f69tn06sqa5d-s*881hw-%=5)1m9qncdpq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = (
+	'107.170.133.157',
+	'liaokev.in',
+)
 
 
 # Application definition
 
 INSTALLED_APPS = (
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -60,8 +64,13 @@ WSGI_APPLICATION = 'kevin_liao_website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'kevinliao_website',
+	'USER': 'kevinliao_website_postgresql', 
+	'PASSWORD': 'NIOlfCMwKUhVl3eea2YwLeToN4RuBDh1ziJ7nx46OrmVljXEKSp4C7jxavyN', 
+	'HOST': 'localhost', 
+	'PORT': '', 
+	
     }
 }
 
@@ -85,10 +94,12 @@ STATIC_PATH = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '/var/www/kevin_liao_website/static'
+
 STATICFILES_DIRS=(
         STATIC_PATH,
 )
 
     
-MEDIA_URL = 'http://localhost:8000/media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT= 'media'
