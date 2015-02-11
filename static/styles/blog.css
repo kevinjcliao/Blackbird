@@ -7,3 +7,9 @@ a.blog_title{
 	color: black; 
 	text-align: center; 
 }
+
+h2.blog_title{
+	font-size: 50px; 
+	color: black; 
+	text-align: center; 
+}
