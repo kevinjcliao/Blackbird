@@ -10,9 +10,12 @@
 			<div class="text_page_container">
 				<img src="{{MEDIA_URL}}{{Blog_Post.post_photo}}"/>
 				<div class="text_page_body">
-					<a class="blog_title" href="{{Blog_Post.id}}">{{Blog_Post.title_text}}</a>
+					<div class = "blog_title">
+						<a class="blog_title" href="{{Blog_Post.id}}">{{Blog_Post.title_text}}</a>
+						<br>
+						<p>Published on {{Blog_Post.pub_date}}</p>
+					</div>	
 					<br>
-					<b>Published on {{Blog_Post.pub_date}}</b>	
 					<div class="blog_content">{{Blog_Post.post_content_text|truncatewords:200|safe}}</div>
 					<a href="{{ Blog_Post.id }}/">Read more</a>
 				</div><!--End text_page_body-->

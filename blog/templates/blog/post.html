@@ -2,15 +2,22 @@
 {% load staticfiles %}
 {% block additional_header %}
 <!-- blog.css -->
-<link rel="stylesheet" href="{% static 'styles/blog.css' %}">
+<link rel="stylesheet" href='{% static "styles/blog.css" %}'>
 {% endblock %}
 
 {% block content %}
+
+<!-- TEST -->
 <div class="text_page_container">
 	<img src="{{MEDIA_URL}}{{Blog_Post.post_photo}}"/>
 
 	<div class = "text_page_body">
-		<h2 class="blog_title">{{Blog_Post.title_text}}</h2>
+		<div class = "blog_title">
+			<h1 class="blog_title">{{Blog_Post.title_text}}</h1>
+			<br>
+			<p>Published on {{Blog_Post.pub_date}}</p>
+		</div>
+		<br>
 		<div class="blog_content">{{Blog_Post.post_content_text|safe}}</div>
 		<div id="disqus_thread"></div>
     			<script type="text/javascript">
